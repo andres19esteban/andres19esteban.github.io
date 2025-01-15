@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ventas, Fiados y Abonos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Registro de Ventas, Fiados y Abonos</h1>
+    </header>
+
+    <section id="ventas">
+        <h2>Ventas</h2>
+        <form id="ventaForm">
+            <label for="productoVenta">Producto Vendido:</label>
+            <input type="text" id="productoVenta" required><br><br>
+
+            <label for="montoVenta">Monto de la Venta ($):</label>
+            <input type="number" id="montoVenta" required><br><br>
+
+            <label for="fechaVenta">Fecha de la Venta:</label>
+            <input type="date" id="fechaVenta" required><br><br>
+
+            <button type="submit">Registrar Venta</button>
+        </form>
+
+        <h3>Total Vendido: $<span id="totalVendido">0</span></h3>
+
+        <!-- Caja de texto visible para mostrar el total -->
+        <label for="totalVendidoInput">Total Vendido:</label>
+        <input type="text" id="totalVendidoInput" readonly><br><br>
+
+        <h3>Ventas Registradas</h3>
+        <ul id="listaVentas"></ul>
+    </section>
+
+    <section id="fiados">
+        <h2>Fiados</h2>
+        <form id="fiadoForm">
+            <label for="nombreCliente">Nombre del Cliente:</label>
+            <input type="text" id="nombreCliente" required><br><br>
+
+            <label for="montoFiado">Monto Fiado ($):</label>
+            <input type="number" id="montoFiado" required><br><br>
+
+            <label for="fechaFiado">Fecha de la Venta Fiada:</label>
+            <input type="date" id="fechaFiado" required><br><br>
+
+            <button type="submit">Registrar Fiado</button>
+        </form>
+
+        <h3>Total de Fiados: $<span id="totalFiados">0</span></h3>
+
+        <h3>Fiados Registrados</h3>
+        <ul id="listaFiados"></ul>
+    </section>
+
+    <section id="abonos">
+        <h2>Abonos</h2>
+        <form id="abonoForm">
+            <label for="clienteAbono">Nombre del Cliente:</label>
+            <input type="text" id="clienteAbono" required><br><br>
+
+            <label for="montoAbono">Monto del Abono ($):</label>
+            <input type="number" id="montoAbono" required><br><br>
+
+            <label for="fechaAbono">Fecha del Abono:</label>
+            <input type="date" id="fechaAbono" required><br><br>
+
+            <label for="restantePorPagar">Monto Restante por Pagar ($):</label>
+            <input type="number" id="restantePorPagar" required><br><br>
+
+            <button type="submit">Registrar Abono</button>
+        </form>
+
+        <h3>Total Abonado: $<span id="totalAbonado">0</span></h3>
+
+        <h3>Abonos Registrados</h3>
+        <ul id="listaAbonos"></ul>
+    </section>
+
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
